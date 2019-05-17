@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Planejamento Financeiro
+    </ion-title>
+    <ion-buttons slot='secondary'>
+        <ion-button [routerLink]='["../home"]'>
+          <ion-icon color='primary' name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>Adicione um novo planejamento</h2>
+
+  <form #form='ngForm' (ngSubmit)='salvar(form)'>
+    <ion-item>
+      <ion-label>Nome do planejamento:</ion-label>
+      <ion-input name="NomePlanejamento" type="text" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Faturamento mensal:</ion-label>
+      <ion-input name="Faturamento" type="text" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Custo fixo mensal:</ion-label>
+      <ion-input name="Custo" type="text" ngModel></ion-input>
+    </ion-item><br>
+    <ion-button type="submit" color="primary">Salvar Plano</ion-button>
+  </form>
+
+
+</ion-content>
